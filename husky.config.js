@@ -6,6 +6,6 @@ module.exports = {
     "post-merge": runYarnLock,
     "post-rebase": "yarn install",
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-    "pre-commit": "yarn lint --fix && yarn typescript",
+    "pre-commit": "lint-staged && pretty-quick --staged && yarn typescript",
   },
 }
