@@ -1,7 +1,7 @@
 {
   "name": "react-native-navigation-state-machine",
   "version": "0.1.0",
-  "description": "a navigation library for react native that uses a state machine to navigate between screens",
+  "description": "A navigation library for react native that uses a state machine to navigate between screens.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -34,7 +34,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "navigation",
+    "state machine"
   ],
   "repository": "https://github.com/dmlux/react-native-navigation-state-machine",
   "author": "Denis-Michael Lux <denis.lux@icloud.com> (https://github.com/dmlux)",
