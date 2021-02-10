@@ -1,19 +1,20 @@
 import * as React from "react"
 
 import { StyleSheet, View, Text } from "react-native"
-import NavigationStateMachine from "react-native-navigation-state-machine"
+import {
+  CardStack,
+  NavigationContainer,
+} from "react-native-navigation-state-machine"
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>()
-
-  React.useEffect(() => {
-    NavigationStateMachine.multiply(3, 7).then(setResult)
-  }, [])
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <NavigationContainer>
+      <CardStack>
+        <View style={styles.container}>
+          <Text>Hi</Text>
+        </View>
+      </CardStack>
+    </NavigationContainer>
   )
 }
 

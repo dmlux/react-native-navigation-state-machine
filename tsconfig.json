@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-navigation-state-machine": ["./src/index"]
+      "react-native-navigation-state-machine": ["./src/index"],
+      "*": ["src/*"],
+      "@components/*": ["src/components/*"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
