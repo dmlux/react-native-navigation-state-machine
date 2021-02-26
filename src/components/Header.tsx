@@ -81,7 +81,7 @@ export const Header = ({
           backgroundColor
         )}
       >
-        <Text>{centerComponent}</Text>
+        <Text style={styles.title}>{centerComponent}</Text>
       </SafeAreaView>
     </>
   )
@@ -93,6 +93,38 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "center",
+    ...Platform.select({
+      android: {
+        elevation: 4,
+      },
+      ios: {
+        shadowOpacity: 0.85,
+        shadowRadius: 0,
+        shadowOffset: {
+          width: 0,
+          height: StyleSheet.hairlineWidth,
+        },
+      },
+      default: {
+        borderBottomWidth: StyleSheet.hairlineWidth,
+      },
+    }),
+    zIndex: 1,
   },
+  title: Platform.select({
+    ios: {
+      fontSize: 17,
+      fontWeight: "600",
+    },
+    android: {
+      fontSize: 20,
+      fontFamily: "sans-serif-medium",
+      fontWeight: "normal",
+    },
+    default: {
+      fontSize: 18,
+      fontWeight: "500",
+    },
+  }),
 })

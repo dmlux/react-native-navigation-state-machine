@@ -6,13 +6,20 @@ import {
   StackView,
 } from "react-native-navigation-state-machine"
 
+const Screen = () => {
+  console.log("Rendered screen")
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text>Hi</Text>
+    </ScrollView>
+  )
+}
+
 export default function App() {
   return (
     <NavigationContainer>
       <StackView>
-        <ScrollView contentContainerStyle={styles.container}>
-          <Text>Hi</Text>
-        </ScrollView>
+        <Screen />
       </StackView>
     </NavigationContainer>
   )
@@ -21,12 +28,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 })

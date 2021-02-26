@@ -15,7 +15,7 @@ export const CardStack = ({ children, insets }: Props) => {
     <Header
       layout={layout}
       statusBarHeight={insets.top}
-      centerComponent={"Ein Test-Titel"}
+      centerComponent={"Einstellungen"}
     />
   )
 

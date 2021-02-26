@@ -28,7 +28,7 @@ export const Card = ({ children, header }: Props) => {
   }
 
   return (
-    <View onLayout={handleLayoutChanged}>
+    <View onLayout={handleLayoutChanged} style={styles.wrapper}>
       {header(layout)}
       <View style={styles.wrapper}>{children}</View>
     </View>
