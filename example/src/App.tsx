@@ -1,19 +1,19 @@
 import * as React from "react"
 
-import { StyleSheet, View, Text } from "react-native"
+import { ScrollView, StyleSheet, Text } from "react-native"
 import {
-  CardStack,
   NavigationContainer,
+  StackView,
 } from "react-native-navigation-state-machine"
 
 export default function App() {
   return (
     <NavigationContainer>
-      <CardStack>
-        <View style={styles.container}>
+      <StackView>
+        <ScrollView contentContainerStyle={styles.container}>
           <Text>Hi</Text>
-        </View>
-      </CardStack>
+        </ScrollView>
+      </StackView>
     </NavigationContainer>
   )
 }
