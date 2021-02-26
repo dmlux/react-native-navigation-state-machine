@@ -4,7 +4,7 @@ import {
   SafeAreaInsetsContext,
 } from "react-native-safe-area-context"
 import { CardStack } from "./CardStack"
-import { SafeAreaProviderContext } from "./SafeAreaProviderContext"
+import { SafeAreaContextProvider } from "./SafeAreaProviderContext"
 
 type Props = {
   children: ReactNode | ReactNode[]
@@ -12,12 +12,12 @@ type Props = {
 
 export const StackView = ({ children }: Props) => {
   return (
-    <SafeAreaProviderContext>
+    <SafeAreaContextProvider>
       <SafeAreaInsetsContext.Consumer>
         {(insets) => (
           <CardStack insets={insets as EdgeInsets}>{children}</CardStack>
         )}
       </SafeAreaInsetsContext.Consumer>
-    </SafeAreaProviderContext>
+    </SafeAreaContextProvider>
   )
 }

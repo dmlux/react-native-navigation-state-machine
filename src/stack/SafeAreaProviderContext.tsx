@@ -30,7 +30,7 @@ type Props = {
   children: ReactNode
 }
 
-export const SafeAreaProviderContext = ({ children }: Props) => {
+export const SafeAreaContextProvider = ({ children }: Props) => {
   return (
     <SafeAreaInsetsContext.Consumer>
       {(insets) => {
